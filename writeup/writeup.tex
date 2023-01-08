@@ -1,7 +1,7 @@
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-\documentclass[10]{article}
+\documentclass[10pt]{article}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -13,21 +13,26 @@
 \usepackage{longtable}
 \usepackage{lscape}
 \usepackage{indentfirst}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=2cm]{geometry}
 \usepackage{enumitem}
 \setitemize{noitemsep,topsep=1em,parsep=0pt,partopsep=0pt}
 
 % Load with some options, i.e. \usepackage[colorlinks=true,linkcolor=blue]{hyperref} or blank
 \usepackage{hyperref}
 
+\usepackage[sfdefault]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
 
 % Change the setup later on, after loading hyperref
 
 \hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
 
+\usepackage[none]{hyphenat}
+
 \begin{document}
 
-\title{Technical report on shit university leaders should know about UO's undergrads\\
+\title{Technical report on grade inflation and geographic distribution of top students at the University of Oregon
 }
 
 %\author{\IEEEauthorblockN{Samuel D. Schwartz}
@@ -37,31 +42,37 @@
 %sam@cs.uoregon.edu}
 %}
 
-\author{Samuel D. Schwartz\\ \small \textit{Jaded and Cynical Graduate Student} \\
-		\small \textit{University of Oregon}\\
-		\small sam@cs.uoregon.edu
+\author{Samuel D. Schwartz\\ \small \textit{A Grumpy Graduate Student, sam@cs.uoregon.edu} \\
+		\small \today
 }
+\date{}
 
 \maketitle
 
 
 \begin{abstract}
-This is a half-assed\footnote{I haven't bothered citing related work in this report.}, wholly irreverent\footnote{I'm not afraid to swear, poke fun at admin, or break stupid rules.}, probably offensive, yet mostly methodologically sound technical report which aims to answer the following research questions (RQs) about undergraduate students at the University of Oregon (UO):
+This is a half-assed\footnote{I haven't bothered with adding citations for related work and other such chores.}, wholly irreverent\footnote{I'm not afraid to editorialize in this report.}, probably offensive, yet hopefully methodologically sound technical report. It aims to answer the following research questions (RQs) about undergraduate students at the University of Oregon (UO) following some exploratory investigation:
 
 \begin{itemize}
-	\item \textit{RQ1: Has UO seen grade inflation?}
-	\item \textit{RQ2: Are high performing students more likely to be men or women at UO?}
-	\item \textit{RQ3: Which majors produce students with higher GPAs?}
-	\item \textit{RQ4: When considering in-state / resident students, which geographic areas of the state produce higher performing students? Similarly, which geographic areas don't produce high preforming students? How does this production intersect with race and sex?}
+	\item RQ1: Has UO seen grade inflation?
+	\item RQ2: Are academically high performing students more likely to be men or women at UO?
+	\item RQ3: Which majors produce students with higher GPAs?
+	\item RQ4: When considering students from Oregon, which geographic areas of the state produce academically high performing students? Similarly, which places don't produce high performing students? How does this production intersect with the racial and gender demographics of a student's community of origin?
 \end{itemize}
 
-It goes without saying that this work is not peer-reviewed, and like hell am I dragging some poor faculty member into my academic politicking to help look over my shoulder and constructively critique my methodology. That said, here are the takeaways (TA):
+It goes without saying that this work is not peer-reviewed, and like hell am I dragging some poor faculty member into my academic politicking to help look over my shoulder and constructively critique my methodology a priori, so there are likely many flaws in this work. That said, here are the takeaways (TA) from the exploratory investigation:
 
 \begin{itemize}
-	\item \textit{TA1: The percentage of full time enrolled students with term GPAs of 3.75 or above has increased from 7\% in Spring Term 2012 to 23\% in Spring Term 2022.}
-	\item \textit{TA2: Our findings suggest that women at UO are consistently more likely than men to be among the top performing students in the past decade. On average, women are overrepresented among top performing students by an additional 6\%, even when controlling for their slightly higher enrollment numbers.}
-	\item \textit{TA3: These majors each produced more than 65 Dean's List students during at least one term since Winter Term 2020 and have also more than doubled their number of students on the list since pre-COVID times. A major's percentage increase in Dean's List students compared to pre-COVID times is in parentheses: Business Administration (up by 293\%), Cinema Studies (152\%), Family and Human Services (271\%), Jour: Advertising (167\%), Jour: Public Relations (151\%), Journalism (139\%), Political Science (104\%), Psychology (116\%). Your major/field not listed? Don't worry, this is just the tip of the iceberg. Every college and every division of CAS has at least one eyebrow raising major.}
-	\item \textit{TA4: When considering in-state / resident students, which geographic areas of the state produce higher performing students? Similarly, which geographic areas don't produce high preforming students? How does this production intersect with race and gender?}
+	\item TA1: The percentage of full time enrolled students with term GPAs of 3.75 or above has increased from 7\% of total enrollment in Spring Term 2012 to 23\% in Spring Term 2022.
+	\item TA2: Our findings suggest that women at UO are consistently more likely than men to be among the top performing students in the past decade. On average, women are overrepresented among top performing students by an additional 6\%, even when controlling for their slightly higher enrollment numbers.
+	\item TA3: These majors each produced more than 65 Dean's List students during at least one term since Winter Term 2020 and have also more than doubled their number of students on the list since pre-COVID times. A major's percentage increase in Dean's List students compared to pre-COVID times is in parentheses: Business Administration (up by 293\%), Cinema Studies (152\%), Family and Human Services (271\%), Jour: Advertising (167\%), Jour: Public Relations (151\%), Journalism (139\%), Political Science (104\%), Psychology (116\%). Your major/field not listed? Don't worry, this is just the tip of the iceberg. Every college and every division of CAS has at least one eyebrow raising major.
+	\item TA4: We have an urban-rural divide and a racial gap in the places where our top performing in-state students are sourced from.
+	\begin{itemize}
+		\item There is a racial gap in zip codes which produce the top performers at UO. Zip codes in the top 50\% of Dean's List producers are $\sim$6\% more white than zip codes in the bottom 50\%.
+		\item Rural areas are particularly unlikely to produce Dean's List students. Eastern Oregon fares worse than Western Oregon. 
+		\item Of note is the Warm Springs Indian Reservation, which is a rural community of color. There hasn't been a single student from that community on the Dean's List in the past decade.
+		\item Within the Willamette Valley, rural areas and smaller towns with comparatively higher proportions of kids of color are less likely to have students on the Dean's Lists. Getting more kids on the Dean's List from smaller towns and rural areas slightly north of Salem, as well as Multnomah county in areas east of I205, would likely go far in closing the geographical racial gap in the zip codes of UOs top performers.
+	\end{itemize}
 \end{itemize}
 
 All of these takeaways are couched in caveats and have various threats to their validity described in the manuscript. This is a technical report crunched out in a long holiday weekend by a single grad student without oversight, not a peer-reviewed multi-author article or heavily scrutinized doctoral dissertation. Take it with a grain of salt. I would love to learn from any thoughtful critique of the methodology or fact-based data which refutes the takeaways.
@@ -72,34 +83,44 @@ All of these takeaways are couched in caveats and have various threats to their 
 %\end{IEEEkeywords}
 
 \section{Introduction}
-This document is a model and instructions for \LaTeX.
-Please observe the conference page limits.
 
-\section{IRB Approval}
-IRB approval sure as hell wasn't sought for this technical report, for the following reasons:
+This report is born out of extreme frustration and irritation. At this point, I'm very near the end of my rope with the University of Oregon's administration and norms, and the tone of this report reflects that frustration.
 
-\begin{enumerate}
-	\item IRB approval is an exercise in absurdity. See this Chronicle of Education article:
-	\item To get IRB approval at UO, you have to have a faculty member sign off on your research. I am not a faculty member. And I'm not about to drag a faculty member anywhere close to my political stunts (and this work, while undertaken to answer the research questions I have to my own satisfaction, is also an office politics stunt).
-	\item All data used in this research were openly and publicly available before any work began.
-	\item Given that the Office of the Provost is currently training machine learning models to identify individual students that are potentially at academic risk without IRB approval\footnote{https://provost.uoregon.edu/analytics}, precedent has been set that internal institutional research aimed at improving student outcomes is exempt from IRB involvement. If enacting \textit{Minority Report} via machine learning in real life for individual at-risk students doesn't need IRB approval, then this research certainly doesn't either. (And if the Office of the Provost has gotten IRB approval for \textit{all} of their projects ahead of time, I'd love to be corrected! Of course, I don't think the Provost's office should seek IRB approval either -- see point 1 about it being an exercise in absurdity -- but there's something to be said about ``Rules for thee but not for me!'' from admin.)
-	\item Portland State's shameful investigation and embarrassing finding of ``research misconduct'' around Peter Boghossian's \textit{Grievance Studies Affair} demonstrated that power structures in academia serve to reinforce and protect themselves at the expense of everyone else. In Boghossian's case, the only moral failing that occurred was the weaponisation of ``research misconduct'' by the university to punish an academic that made the ivory tower look bad, as does aspects of the research done in this technical report.
+After spending the summer of 2022 running around Oregon meeting state politicians in an effort to make positive legislative changes to higher education (such as by increasing the state appropriation, because I'm tired of being paid so damn poorly), and talking with a lot of politicians (both Democrats and Republicans) about their concerns regarding higher education, I subsequently asked at the Board of Trustees meeting just before the start of the school year for data about whether we at UO are serving Oregon's in-state students from rural places just as well as we are serving our students from urban areas.
+
+It became clear to me (again) after the December Board of Trustees meeting, when this kind of information wasn't forthcoming, that asking senior leadership for anything (higher pay for the poorest-paid employees, data on how to be a better institution, feedback on how to ask for such things more effectively, whatever) is to tilt at windmills.
+
+I'm not ready to give up on this university yet, however. So instead of working on my dissertation, I spent a few days pulling together data for this goddamn report that probably won't be read, and if it is read, probably won't be acted on in any meaningful way. I hope I'm proved wrong.
+
+The last research question posed in the abstract, the one about the in-state geographical distribution of UO's most academically successful students, is closest to my original motivating question about the status of student success across our state. But, as I looked for publicly available raw data sets that could help answer my question (of which there are very few), I settled on the Dean's List, which has zip code data. When I first looked at the raw data, I had a few additional questions, which formed the remaining research questions tackled in this report.
+
+
+%\section{IRB Approval}
+%IRB approval sure as hell wasn't sought for this technical report, for the following reasons:
+
+%\begin{enumerate}
+%	\item IRB approval is an exercise in absurdity. See this Chronicle of Education article: \url{https://www.chronicle.com/article/the-abject-failure-of-irbs}
+%	\item To get IRB approval at UO, you have to have a faculty member sign off on your research. I am not a faculty member. And I'm not about to drag a faculty member anywhere close to my political stunts (and this work, while undertaken to answer the research questions I have to my own satisfaction, is also an office politics stunt).
+%	\item All data used in this research were openly and publicly available before any work began.
+%	\item IRB approval is a boatload of paperwork, takes forever to get, and this research is all probably exempt anyway, even though it deals with identifiable human subjects, because all my data is already publicly available.
+%	\item Given that the Office of the Provost is currently training machine learning models to identify individual students that are potentially at academic risk without IRB approval\footnote{https://provost.uoregon.edu/analytics}, precedent has been set that internal institutional research aimed at improving student outcomes is exempt from IRB involvement. If enacting \textit{Minority Report} via machine learning in real life for individual at-risk students doesn't need IRB approval, then this research certainly doesn't either. (And if the Office of the Provost has gotten IRB approval for \textit{all} of their projects ahead of time, I'd love to be corrected! Of course, I don't think the Provost's office should seek IRB approval either -- see point 1 about it being an exercise in absurdity -- but there's something to be said about ``Rules for thee but not for me!'' from admin.)
+%	\item Portland State's shameful investigation and embarrassing finding of ``research misconduct'' around Peter Boghossian's \textit{Grievance Studies Affair} demonstrated that power structures in academia serve to reinforce and protect themselves at the expense of everyone else. In Boghossian's case, the only moral failing that occurred was the weaponisation of ``research misconduct'' by the university to punish an academic that made the ivory tower look bad, as does aspects of the research done in this technical report.
 	
-	I refuse to spend my career looking over my shoulder, tiptoeing around, or otherwise placating others in a relentless search for Truth, even when that truth is uncomfortable or challenges deeply held assumptions. The only way to win is to not play. Further, the ethical position is to rebuke those which seek to derail the search for Truth under other guises. In this case, the appropriate ethical response should include the stripping of tenure of any faculty member (or the firing of an administrator) who would seek to outright censor or indirectly chill inquiry of this or similar work under pretense, including the pretense of ``research misconduct.''
-\end{enumerate}
+%	I refuse to spend my career looking over my shoulder, tiptoeing around, or otherwise placating others in a relentless search for Truth, even when that truth is uncomfortable or challenges deeply held assumptions. The only way to win is to not play. Further, the ethical position is to rebuke those which seek to derail the search for Truth under other guises. In this case, the appropriate ethical response should include the stripping of tenure of any faculty member (or the firing of an administrator) who would seek to outright censor or indirectly chill inquiry of this or similar work under pretense, including the pretense of ``research misconduct.''
+%\end{enumerate}
 
-Lastly, it would be a mistake to think that by my general disdain for IRBs as they are currently constituted in universities across the US means that I argue against ethics in research. Quite the opposite. At a time when the value of higher education is increasingly questioned by large swaths of the American public, ethics in academic research has never been more important. Talk with me offline about how we can improve ethical conduct in research -- it's not by pandering to (usually well meaning) bureaucrats in the IRB office or placating petty tyrants serving on an some committee/board sanctimoniously (self) tasked with determining the ethics of research with controversial conclusions during pearl clutching meetings.% If we're concerned about ethics in research, my suggestion is to have editors require methodologies to be pre-registered for resultant papers to be published. If the methodology has ethical issues, have the editor or peer reviewers deal with it, not some random bureaucratic office.
+%Lastly, it would be a mistake to think that by my general disdain for IRBs as they are currently constituted in universities across the US means that I argue against ethics in research. Quite the opposite. At a time when the value of higher education is increasingly questioned by large swaths of the American public, ethics in academic research has never been more important. Talk with me offline about how we can improve ethical conduct in research -- it's not by pandering to (usually well meaning) bureaucrats in the IRB office or placating petty tyrants serving on an some committee/board sanctimoniously (self) tasked with determining the ethics of research with controversial conclusions during pearl clutching meetings.% If we're concerned about ethics in research, my suggestion is to have editors require methodologies to be pre-registered for resultant papers to be published. If the methodology has ethical issues, have the editor or peer reviewers deal with it, not some random bureaucratic office.
 
-\section{RQ1: Grade Inflation}
+\section{RQ1: Has UO seen grade inflation?}
 
 \subsection{Methodology}
 \label{sec:rq1-methodology}
 
-The vast majority of student records are (rightly) protected under FERPA. But there is one publicly available data set which allows for independent analysis and inquiry related to this report's research questions: the Dean's Lists.
+The vast majority of student records are (rightly) protected by federal law under FERPA. But there is one publicly available data set which allows for independent analysis and inquiry related to this report's research questions: the Dean's Lists.
 
 The Dean's List (sometimes called the Honor Roll) is an academic honor bestowed on undergraduate students at many universities, including at the University of Oregon. The criteria is usually simple: have a GPA for the term higher than some university-defined threshold. At the University of Oregon, that threshold has been a 3.75 GPA for students who took more than 15 credits (of which 12 must be graded) for at least a decade.
 
-To further clarify, a student's term GPA is not their overall GPA. It's only the GPA they have for the classes the student took that term. For example, suppose a first year student flunked all their classes in Fall term, a total of 16 credits. This student would have a term GPA of 0.0 and an overall GPA of 0.0. The next term, the student really turned it around and earned As in all 16 credits. The student would have a term GPA of 4.0, would be on the Dean's List, and have an overall GPA of 2.0.
+To further clarify, a student's term GPA is not their overall GPA. It's only the GPA they have for the classes the student took that term. For example, suppose a first year student flunked all their classes in Fall term, a total of 16 credits. This student would have a term GPA of 0.0 and an overall GPA of 0.0. The next term, the student really turned it around and earned As in all 16 credits. The student would have a term GPA of 4.0, would be on the Dean's List for that term, and have an overall GPA of 2.0.
 
 The Dean's List is published in the campus bulletin, \textit{Around the O}, each term. The news article always reports the number of students that made the list, and the number of students enrolled that term.
 
@@ -108,16 +129,16 @@ We sought to find all the articles about the Dean's List for the past decade and
 
 \subsection{Results}
 
-With the exception of academic year 2015-2016\footnote{We believe academic year 2015-2016 corresponds to a year when there were some changes in the way \textit{Around the O} was produced, which is why the Dean's List for that year was not available online. However, we are not completely sure of the reason it wasn't published. It could also be that the Dean's List simply didn't get compiled for 2015-2016 for some unknown reason.} we were able to obtain the number of undergraduate students that made the list, and the number of students enrolled that term.
+With the exception of academic year 2015-2016\footnote{We believe academic year 2015-2016 corresponds to a year when there were some changes in the way \textit{Around the O} was produced, which is why the Dean's List for that year was not available online. However, we are not completely sure of the reason it wasn't published. It could also be that the Dean's List simply didn't get compiled for 2015-2016 for some unknown reason.} we were able to obtain the number of undergraduate students that made the list, and the number of students enrolled each term, for the last decade of academic years. 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{longtable}
 % Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
-\begin{longtable}[c]{|l|l|l|l|l|}
-	\caption{\parbox{0.7\linewidth}{Number of students that made the Dean's List (i.e., had term GPAs of 3.75 or above) each term for the last decade. Included is the overall undergraduate enrollment for the term, and the percentage of students who made the Dean's list given overall enrollment.}}
+\begin{longtable}[c]{|c|c|c|c|c|}
+	\caption{\parbox{\linewidth}{Number of students that made the Dean's List (i.e., had term GPAs of 3.75 or above) each term for the last decade. Included is the overall undergraduate enrollment for the term, and the percentage of students who made the Dean's list given overall enrollment.}}
 	\label{tab:grade-inflation-table}\\
 	\hline
-	\textbf{Academic Year} & \textbf{Term} & \textbf{Count} & \textbf{Enrollment} & \textbf{\%} \\ \hline
+	\textbf{Academic Year} & \textbf{Term} & \textbf{Count} & \textbf{Enrollment} & \textbf{Percentage of enrolled students on the Dean's List} \\ \hline
 	\endhead
 	%
 	%2011-2012              & Spring        & 1,293          & 19,153              & 7\%                 \\ \hline
@@ -155,7 +176,7 @@ With the exception of academic year 2015-2016\footnote{We believe academic year 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{../visualizations/grade-inflation}
+	\includegraphics[width=0.75\linewidth]{../visualizations/grade-inflation}
 	\caption[Grade Inflation]{Percentage of all UO students on the Dean's List, which is essentially the percentage of full time students with term GPAs of 3.75 or above. Trendline fitted with LOESS in R (a type of local polynomial regression fitting).}
 	\label{fig:grade-inflation}
 \end{figure}
@@ -179,11 +200,11 @@ Moreover, it's important to note that the trend started before COVID hit. Fall 2
 
 Future work around this research question revolves around whether other universities have seen similar grade distribution changes as UO. While it may be tempting for some members of the university community to assign lower grades to combat perceived grade inflation, doing so will only put UO's students at a competitive disadvantage when they seek out employment or external scholarships if UO student grades are consistently lower than their peers from otherwise similar universities. Understanding how UO's grade distribution compares to peers is important to determine before policymakers (whether individual instructors or academic leadership) make changes.
 
-\section{RQ2: Are high performing students more likely to be Men or Women at UO?}
+\section{RQ2: Are academically high performing students more likely to be men or women at UO?}
 
 \subsection{Methodology}
 
-In addition to the \textit{Around the O} articles about the Dean's List discussed in \S\ref{sec:rq1-methodology}, the actual Dean's List itself is a searchable Microsoft Excel spreadsheet. All lists are published in \textit{Around the O} or its archives from academic year 2012-2013 to 2021-2022, except for academic year 2015-2016 and Spring Term 2013. The list contains a student's first name, middle name, last name, major, home state, city, and zipcode. A student's gender is not included in the data.
+In addition to the \textit{Around the O} articles about the Dean's List discussed in \S\ref{sec:rq1-methodology}, the actual Dean's List itself is a searchable Microsoft Excel spreadsheet. All lists are published in \textit{Around the O} or its archives from academic year 2012-2013 to 2021-2022, except for academic year 2015-2016 and Spring Term 2013. The list contains a student's first name, middle name, last name, major, home state, city, and zip code. A student's gender is not included in the data.
 
 To infer a student's gender, we employ \texttt{genderComputer}\footnote{\url{https://github.com/tue-mdse/genderComputer}}, a tool used in previous peer reviewed research for inferring gender from names. Provided a name, it infers ``Male,'' ``Female,'' ``Unisex,'' or ``Unknown.'' The tool has a reported precision of 93\%. We combine unisex and unknown into the same category for reporting purposes.
 
@@ -240,7 +261,7 @@ This gender inferment from the Dean's Lists is benchmarked against university-wi
 % \usepackage{multirow}
 % \usepackage{longtable}
 % Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
-\begin{longtable}[c]{|l|l|ll|ll|l|}
+\begin{longtable}[c]{|c|c|ll|ll|r|}
 	\caption{Two-gender ratio of Dean's List students (i.e., gender ratio with ``Unknowns'' excluded) compared with undergraduate enrollment by gender for the Fall enrollment census. Gender parity on the Dean's List would mean that the gender ratios of the Dean's List matched the gender ratios of overall enrollment.  Missing entries indicate that the Dean's List was not available for that particular term.}
 	\label{tab:gender-benchmark}\\
 	\hline
@@ -289,15 +310,15 @@ Assuming that the true gender ratios of the Dean's List closely mirror the resul
 
 The ideal thing to do is get a list of enrollment by major for each term for the last decade and compare it with the number of students in each major on the Dean's List.
 
-Unfortunately, I cannot find such a list of enrollment by major by term for the last decade. What I can find are some data dashboards from the Office of the Provost\footnote{\url{https://provost.uoregon.edu/analytics/dashboards}}, Institutional Research\footnote{\url{https://ir.uoregon.edu/students}}, and Registrar's Office\footnote{\url{https://registrar.uoregon.edu/statistics/majors}}. Neither of these websites have university wide major-specific data. But there is university-wide department-specific data. This is a subtle but important difference. As an illustrative example, the Department of Computer Science offers several majors: Computer Science, MACS (a Math + CS combo major), an accelerated BS+MS major, and so forth.
+Unfortunately, I cannot find such a list of enrollment by major by term for the last decade. What I can find are some data dashboards from the Office of the Provost\footnote{\url{https://provost.uoregon.edu/analytics/dashboards}}, Institutional Research\footnote{\url{https://ir.uoregon.edu/students}}, and Registrar's Office\footnote{\url{https://registrar.uoregon.edu/statistics/majors}}. None of these websites have university wide major-specific data. But there is university-wide department-specific data. This is a subtle but important difference. As an illustrative example, the Department of Computer Science offers several majors: Computer Science, MACS (a Math + CS combo major), an accelerated BS+MS major, and so forth.
 
-Moreover, one has to manually select the department to get the headcount. There's no way to just download the data as a spreadsheet, and I'm not manually collecting 30 terms $\times$ dozens of departments worth of enrollment data from obnoxious dropdown menus. It's winter break; I want to drink eggnog and play board games with my family, not waste time scraping data for this side project.
+Moreover, one has to manually select the department to get the headcount on all of these sites. There's no way to just download the data as a spreadsheet, and I'm not manually collecting 30 terms $\times$ dozens of departments worth of enrollment data from obnoxious checkboxes and dropdown menus. It's winter break; I want to drink eggnog and play board games with my family, not waste time scraping data for this side project.
 
-So instead, we're (1) aggregating the majors in the Dean's Lists to determine the most common majors on the Dean's List, (2) seeing if there's a nice curve to the distribution of the data to determine if there's an obvious elbow, and (3) comparing those frequently seen majors on the Dean's List against departmental enrollment data.
+So instead, we're (1) aggregating the data in the Dean's Lists to determine the most common majors, (2) seeing if there's a nice curve to the distribution of the data to determine if there's an obvious elbow, and (3) comparing those frequently seen majors on the Dean's List against departmental enrollment data.
 
 The goal is to find outliers amongst the top-producing departments relative to their undergraduate enrollments. For example, we hypothesize that Psychology -- long one of the most popular undergraduate majors, if not \textit{the} most popular major -- will show up in the list of most frequent majors on the Dean's List. But, we want to control for student headcount, so we'll divide by the Psychology department's enrollment to get its overall Dean's List production rate.
 
-The result will be a short list where we can identify departments which (i) produce lots of Dean's List students and (ii) produce them at a rate greater than would be expected given the size of their department.
+The result will be a list where we can identify departments which (i) produce lots of Dean's List students and (ii) produce them at a rate greater than would be expected given the size of their department.
 
 Further, to help benchmark, we'll (4) consider the \textit{Dean's List / Departmental Enrollment} ratio of the median majors by overall Dean's List prevalence to help establish a baseline ``typical'' Dean's List production rate.
 
@@ -314,8 +335,8 @@ We take each of these in turn.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.33\linewidth]{../visualizations/contributions-by-major2}
-	\caption{Each dot represents the number of students each major contributes to the Dean's List. Each roughly vertical line of dots represents an academic term in the last decade (four terms are missing due to missing data in academic year 2015-2016 and Spring 2013. The solid green horizontal line, which was arbitrarily placed, represents the 90th percentile or 65 students. This is to say that, across the last decade, 90\% of all majors contribute fewer than 65 students to the Dean's List each term. 10\% of majors contribute more than 65 students. The dashed yellow line is the median value, 13 students. While not in the methodology, we include a vertical gray line to denote the start of COVID (Winter 2020), and a red dotted line to indicate the most number of students a major ever produced on the Dean's List before COVID. }
+	\includegraphics[width=0.42\linewidth]{../visualizations/contributions-by-major2}
+	\caption{Each black circle/dot represents the number of students a given major contributes to the Dean's List. Each roughly vertical line of dots represents an academic term in the last decade (four terms are missing due to missing data in academic year 2015-2016 and Spring 2013. The solid green horizontal line represents the 90th percentile or 65 students. This is to say that, across the last decade, 90\% of all majors contribute fewer than 65 students to the Dean's List each term. 10\% of majors contribute more than 65 students. The dashed yellow line is the median value, 13 students. While not in the methodology, we include a vertical gray line to denote the start of COVID (Winter 2020), and a red dotted line to indicate the most number of students a major ever produced on the Dean's List before COVID. }
 	\label{fig:contributions-by-major}
 \end{figure}
 
@@ -346,23 +367,23 @@ There are 206 major-term points that have produced more than 65 students  on the
 \end{itemize}
 
 
-\textbf{Majors which produced more than 65 students on the Dean's List at least once after or during Winter 2020} (Bolded majors are not on the Pre-COVID list.):
+\textbf{Majors which produced more than 65 students on the Dean's List at least once after or during Winter 2020} (Italicized majors are not on the Pre-COVID list.):
 
 \begin{itemize}
-\item \textbf{Art}
+\item \textit{Art}
 \item Biology
 \item Pre-Business Administration
 \item Business Administration
-\item \textbf{Cinema Studies}
-\item \textbf{Communication Disorders and Sci}
-\item \textbf{Computer and Information Science}
+\item \textit{Cinema Studies}
+\item \textit{Communication Disorders and Sci}
+\item \textit{Computer and Information Science}
 \item Economics
 \item Educational Foundations
-\item \textbf{English}
-\item \textbf{Environmental Science}
-\item \textbf{Environmental Studies}
+\item \textit{English}
+\item \textit{Environmental Science}
+\item \textit{Environmental Studies}
 \item Exploring / Undeclared
-\item \textbf{Family and Human Services}
+\item \textit{Family and Human Services}
 \item General Social Science
 \item Human Physiology
 \item Jour:Advertising
@@ -370,7 +391,7 @@ There are 206 major-term points that have produced more than 65 students  on the
 \item Journalism
 \item Political Science
 \item Psychology
-\item \textbf{Sociology}
+\item \textit{Sociology}
 \end{itemize}
 
 There are 20 majors-term points since COVID hit that have produced more Dean's List students than before COVID (which was 207 students in Fall 2012, majoring in ``Undeclared/Exploring''). These are the points above the red dotted line in Figure~\ref{fig:contributions-by-major}. While all major-term points above the green line are suspect, the ones above the red are particularly noteworthy. Of those major-term points above the red line, there were only five majors:
@@ -389,9 +410,9 @@ There are 20 majors-term points since COVID hit that have produced more Dean's L
 
 Why haven't I pulled together the department data? I'm feeling lazy (and I promised in the abstract that this is a half-assed report), so I'm not finishing Step 3 or 4 and pulling down the data to cross compare against department enrollments. Feel free to do that yourself: \url{https://provost.uoregon.edu/analytics/dashboards}
 
-I did investigate almost all of the bolded majors in the list of post-COVID producers. In almost every case, total enrollment in these majors was either flat over the last decade or on the decline.
+I did investigate almost all of the italicized majors in the list of post-COVID producers. In almost every case, total enrollment in the home departments of these majors was either flat over the last decade, or on the decline.
 
-
+\newpage
 
 \subsubsection{Steps 5: Compare year-over-year figures}
 
@@ -409,7 +430,7 @@ I did investigate almost all of the bolded majors in the list of post-COVID prod
 	\label{tab:pre-post-covid}\\
 	\hline
 	\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Major}}}            & \multicolumn{2}{c|}{\textbf{Students on Dean's List (Medians)}}                                                 & \multicolumn{2}{c|}{\textbf{Change Since Covid Hit}} \\ \cline{2-5} 
-	\multicolumn{1}{|c|}{}                                           & \multicolumn{1}{c|}{\textbf{F2016 to F2019}} & \multicolumn{1}{c|}{\textbf{W2020 to S2021}} & \multicolumn{1}{c|}{\textbf{Number}}    & \textbf{Percentage}   \\ \hline
+	\multicolumn{1}{|c|}{}                                           & \multicolumn{1}{c|}{\textbf{F2016 to F2019}} & \multicolumn{1}{c|}{\textbf{W2020 to S2022}} & \multicolumn{1}{c|}{\textbf{Number}}    & \textbf{Percentage}   \\ \hline
 	\endhead
 	%
 	\multicolumn{5}{|c|}{\textbf{Majors with more than 10 students (median) on the Dean's List from Fall 2016 to Fall 2019}}                                                                                                                             \\ \hline
@@ -458,6 +479,7 @@ I did investigate almost all of the bolded majors in the list of post-COVID prod
 	\multicolumn{1}{|c|}{Pre-International Studies}                  & \multicolumn{1}{c|}{29}                              & \multicolumn{1}{c|}{8}                                   & \multicolumn{1}{c|}{-21}                & -72\%                 \\ \hline
 	\multicolumn{1}{|c|}{Pre-Education}                              & \multicolumn{1}{c|}{27}                              & \multicolumn{1}{c|}{0}                                   & \multicolumn{1}{c|}{-27}                & -100\%                \\ \hline
 	\multicolumn{1}{|c|}{Pre-Family and Human Services}              & \multicolumn{1}{c|}{15}                              & \multicolumn{1}{c|}{0}                                   & \multicolumn{1}{c|}{-15}                & -100\%                \\ \hline
+		\multicolumn{5}{|c|}{\textbf{\qquad}}                                                                                                                              \\ \hline
 	\multicolumn{5}{|c|}{\textbf{Majors with 10 or fewer students (median) on the Dean's List from Fall 2016 to Fall 2019}}                                                                                                                              \\ \hline
 	\multicolumn{1}{|c|}{Pre-Global Studies}                         & \multicolumn{1}{c|}{0}                               & \multicolumn{1}{c|}{23}                                  & \multicolumn{1}{c|}{23}                 & NA                    \\ \hline
 	\multicolumn{1}{|c|}{Marine Biology}                             & \multicolumn{1}{c|}{10}                              & \multicolumn{1}{c|}{26}                                  & \multicolumn{1}{c|}{16}                 & 160\%                 \\ \hline
@@ -690,22 +712,22 @@ Nevertheless, there is something to be said about those majors which seem to app
 	\item Psychology (116\%)
 \end{itemize}
 
-\section{RQ4: When considering in-state / resident students, which geographic areas of the state produce higher performing students? Similarly, which geographic areas don't produce high performing students? How does this production intersect with race and gender?}
+\section{RQ4: When considering students from Oregon, which geographic areas of the state produce academically high performing students? Similarly, which places don't produce high performing students? How does this production intersect with the racial and gender demographics of a student's community of origin?}
 
 \subsection{Methodology}
 
 \begin{enumerate}
-	\item Partition Dean's List data by Oregon ZIP codes. Focus on in-state students for the rest of this analysis.
+	\item Partition Dean's List data by Oregon zip codes. Focus on in-state students for the rest of this analysis.
 	\item The same student can be on the Dean's List for multiple terms. Consolidate the individuals on multiple Dean's Lists by the following criteria:
-	A student on list $L_i$ is considered to be the same individual as a student on list $L_j$ if both students have (1) the same name and (2) the same ZIP code.\footnote{Changes in majors, such as ``Exploring/Undeclared'' to something else, is too common and messy to be a reliable index for this quick-and-dirty ``get the gist'' technical report.}
+	A student on list $L_i$ is considered to be the same individual as a student on list $L_j$ if both students have the same first, middle, and last name.\footnote{Changes in zip codes or especially majors, such as ``Exploring/Undeclared'' to something else, is too common and messy to be a reliable index for this quick-and-dirty ``get the gist'' technical report.}
 	\item Using the \texttt{genderComputer} tool, infer a gender for each student.
-	\item Aggregate students by ZIP code. Provide a two-gender split for each ZIP code as follows:
+	\item Aggregate students by zip code. Provide a two-gender split of the number of students on UO's Dean's List for each zip code as follows:
 	\begin{enumerate}
-		\item Each ZIP code will have three numbers: Population of Men, Women, Unisex/Unknown. Call these numbers $m$, $w$, $u$. Total population per ZIP code is $t=m+w+u$.
-		\item Let the approximate number of women by ZIP code be $W=\frac{w}{m+w} \cdot t$ and let the approximate number of men by ZIP code be $M=\frac{m}{m+w} \cdot t$.
-		\item Round $W$ and $M$ to the nearest integer for the approximate two-gender split per ZIP code.
+		\item Each zip code will have three numbers: Population of Men, Women, Unisex/Unknown. Call these numbers $m$, $w$, $u$. Total population per zip code is $t=m+w+u$.
+		\item Let the approximate number of women by zip code be $W=\frac{w}{m+w} \cdot t$ and let the approximate number of men by zip code be $M=\frac{m}{m+w} \cdot t$.
+		\item Round $W$ and $M$ to the nearest integer for the approximate two-gender split per zip code.
 	\end{enumerate}
-	\item Get population data from 2020 for teenagers (who are now traditional college age) by ZIP code from the US Census Bureau.
+	\item Get population data from 2020 for teenagers aged 15-17 (who are now traditional college age) by zip code from the US Census Bureau.
 	\begin{enumerate}
 		\item Stratify by overall population density
 		\item Stratify by youth population density
@@ -718,7 +740,179 @@ Nevertheless, there is something to be said about those majors which seem to app
 		\end{enumerate}
 	\end{enumerate}
 	\item Plot various maps comparing these stratified data and identify any trends. 
-	\item If possible, overlay ZIP code data with school district boundaries. Identify which schools or districts are under or over producing top students relative to norms.
+	%\item If possible, overlay zip code data with school district boundaries. Identify which schools or districts are under or over producing top students relative to norms.
 \end{enumerate}
+
+\subsection{Results}
+
+\subsubsection{Results of Methodology Steps 1-3}
+
+15,322 unique students with Oregon zip codes from the last decade of available Dean's Lists were consolidated in steps 1-3, of which 41.3\% and 58.7\% were inferred to be men and women, respectively. A gender gap of 17.4\%.
+
+\subsubsection{Results of Methodology Steps 4-6}
+
+To help illustrate our findings, we present a sequence of maps.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../visualizations/zcta}
+	\caption{This is a map of the US Census Bureau's ``Zip Code Tabulation Areas'' or ZCTAs for Oregon, which mostly correspond to zip codes. A conversion for the few zip codes which don't correspond to a unique ZCTA (usually small geographical areas like a few large apartment complexes, PO Boxes, or other high volume mail recipients) was found and used here: \url{https://udsmapper.org/zip-code-to-zcta-crosswalk/}. Blank areas means there are no postal addresses. These blank spaces are almost uniformly wilderness areas or bodies of water.}
+	\label{fig:zcta}
+\end{figure}
+
+\qquad
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../visualizations/zcta-counties}
+	\caption{This is the same map as Figure~\ref{fig:zcta}, but with county lines superimposed.}
+	\label{fig:zcta-counties}
+\end{figure}
+
+\qquad
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../visualizations/zcta-counties-youth}
+	\caption{This is the same map as Figure~\ref{fig:zcta-counties}, but only showing Zip Code Tabulation Areas (ZCTAs) with at least one person aged 15-17 in 2020. This map forms the basis for the rest of our analysis.}
+	\label{fig:zcta-counties-youth}
+\end{figure}
+
+
+\qquad
+
+For expediency, we will call the 15-17 year old population in 2020 the ``Youth Population.'' This Youth Population is 148,336 statewide. Given that we have 15,333 unique students on the Dean's Lists, our pseudo per-capita average is 15,333/148,336 = 0.103. This number, by itself, is meaningless. The units are FUBAR. (A 10 year span of Dean's List recipients with four quarters missing from the data, divided by the number of 15-17 year olds in 2020? That's confusing to internalize.)
+
+These pseudo per-capita numbers, with their unusual units, are only useful as a basis of comparison with other numbers with identical units. Therefore, since the units are weird, the better thing to do is to showcase quantiles, which paints the same picture of what ZCTAs are doing well vs poorly in UO Dean's List production, but minimizes confusion. It's much easier to internalize ``this zip code is in the top 25\% of zip codes,'' which is what will be presented in the following maps.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../visualizations/youth-per-capita-quartile}
+	\caption{Each Zip Code Tabulation Area (ZCTA) has some number of UO Dean's List students. Each ZCTA has a youth population. The youth-adjusted per-capita ratio of Dean's List students for each ZCTA is $\frac{\text{Number of Dean's List Students in this ZCTA}}{\text{Youth Population of this ZCTA}}$. To more easily illustrate where Dean's List students come from, these ratios were binned into four quartiles and mapped. }
+	\label{fig:youth-per-capita-quartile}
+\end{figure}
+
+\qquad
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../visualizations/youth-per-capita-quartile-willammette}
+	\includegraphics[width=0.8\linewidth]{../visualizations/youth-per-capita-quartile-pdx}
+	\caption{Zoom in of \ref{fig:youth-per-capita-quartile}, focusing on the Willamette Valley and the Portland Metro Area.}
+	\label{fig:youth-per-capita-quartile-closeup}
+\end{figure}
+
+\qquad
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../visualizations/youth-per-capita-quartile-100}
+	\caption{
+		While \ref{fig:youth-per-capita-quartile}, is informative, we know that small populations can add noise when doing analysis. It doesn't matter quite as much if a particular rural zip code with five people in it hasn't produced a Dean's List student. This map shows the same quartile distribution as \ref{fig:youth-per-capita-quartile}, but only for those ZCTAs which have more than 100 youth. The takeaway is that Eastern Oregon isn't doing nearly as well as Western Oregon.}
+	\label{fig:youth-per-capita-quartile-100}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../visualizations/lowest-two-quartiles}
+	\includegraphics[width=0.55\linewidth]{../visualizations/lowest-two-williammette}
+	\includegraphics[width=0.4\linewidth]{../visualizations/lowest-two-pdx}
+	\caption{
+		To highlight which areas are not producing top performing students, we remove the highest quartiles and show only the bottom two quartiles where the total youth population in 2020 was greater than 100. That is, the same as Figure~\ref{fig:youth-per-capita-quartile-100}, but with the yellow removed. The state, Willamette Valley, and Portland metro regions are also shown.}
+	\label{fig:lowest-two-quartiles}
+\end{figure}
+
+\newpage
+
+We also performed a racial analysis on the ZCTAs in Figure~\ref{fig:youth-per-capita-quartile-100} and found a gap. In looking at the youth population, we find that the yellow ZCTAs are 66\% white and 34\% kids of color in aggregate, compared with the poorer performing green ZCTAs, which are 60\% white and 40\% kids of color in aggregate -- a 6\% racial gap. This gap shrinks somewhat if we relax the 100-kid threshold for a ZCTA to count back to zero (which has the practical effect of adding a few more rural white kids mostly from Eastern Oregon back into the mix), but only by about 1\% to an overall racial gap of 5\% just about any way one slices the data.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../visualizations/youth-of-color}
+	\caption{
+		Taking the ZCTAs in Figure~\ref{fig:youth-per-capita-quartile-100} and shading the bottom two quartiles (dark and light green Figure~\ref{fig:youth-per-capita-quartile-100}) by the percentage of youth of color ages 15-17  in each district as a proportion of all youth ages 15-17 in 2020.
+		The bright yellow spot north of Bend is the Warm Springs Indian Reservation.
+	}
+	\label{fig:youth-of-color}
+\end{figure}
+
+This information is great and all, but the number of places in the bottom two quartiles is still a lot, even with the 100 kid minimum per zip code threshold. So where are the worst of the worst zip codes when it comes to Dean's List student production? 
+
+Let's go back to Figure \ref{fig:lowest-two-quartiles}, take a look at the lowest quartile, and examine actual numbers.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../visualizations/few-kids-on-deans-list}
+	\caption{
+		Map of Zip Code Tabulation Areas with more than 100 teens ages 15-17 in 2020 in the lowest quartile of UO's Dean's List production. All zip code tabulation areas in the lowest quartile have had two or fewer student's on UO's Dean's List in the past decade.
+	}
+	\label{fig:few-kids-on-deans-list}
+\end{figure}
+
+A few plots related to gender were examined, but nothing immediately came to note which couldn't be explained by statistical noise. Also, I'm lazy, and I want to get back to my winter break / actual dissertation research and not fuss around with tedious-to-make maps in statistical software, so I didn't try very hard.
+
+\subsection{Discussion, Threats to Validity, and Takeaways}
+
+
+\textbf{Discussion and Threats to Validity}: This is an exploratory document, meant to get a sense of where top performers come from and where they do not come from. This is merely the first document, meant to spark awareness, not the end-all, be-all.
+
+Different people can slice this data differently, and may arrive at different conclusions. It's also important to note that just because some communities don't produce students on UO's Dean's List doesn't mean there's necessarily anything wrong with those communities. It just means there's a problem somewhere in the pipeline which prevents students from making it to the Dean's List. While we at UO can't control local schools, we can make sure that we are doing due diligence in outreach efforts to these communities and verifying that students from these communities have adequate support systems in place when they arrive at UO.
+
+\qquad
+
+\textbf{Takeaways}:
+
+\begin{itemize}
+	\item There is a racial gap in zip codes which produce the top performers at UO. Zip codes in the top 50\% of Dean's List producers are $\sim$6\% more white on average than zip codes in the bottom 50\%.
+	\item Rural areas are particularly likely to produce few-to-no Dean's List students. Eastern Oregon fares worse than Western Oregon. The following places are noteworthy as producing very few Dean's List students:
+	
+	% Please add the following required packages to your document preamble:
+	% \usepackage{longtable}
+	% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+	\begin{longtable}[c]{|l|l|l|}
+		\caption{Zip Code Tabulation Areas with more than 100 youth in 2020 and in the bottom quartile of students on UO's Dean's List in the last decade. The tiny slice of a Walla Walla, WA ZCTA which is in Oregon was removed as an outlier.}
+		\label{tab:areas-of-concern}\\
+		\hline
+		\textbf{ZCTA} & \textbf{City / Location}  & \textbf{Students on Dean's List, Past Decade} \\ \hline
+		\endhead
+		%
+		97017         & Colton         & 0                                             \\ \hline
+		97761         & Warm Springs   & 0                                             \\ \hline
+		97818         & Boardman       & 0                                             \\ \hline
+		97827         & Elgin          & 0                                             \\ \hline
+		97845         & John Day       & 0                                             \\ \hline
+		97913         & Nyssa          & 0                                             \\ \hline
+		97136         & Rockaway Beach & 1                                             \\ \hline
+		97380         & Siletz         & 1                                             \\ \hline
+		97396         & Willamina      & 1                                             \\ \hline
+		97443         & Glide          & 1                                             \\ \hline
+		97882         & Umatilla       & 1                                             \\ \hline
+		97048 and 97054 & Rainier and Deer Island      & 2                                             \\ \hline
+		97814         & Baker City     & 2                                             \\ \hline
+	\end{longtable}
+	
+	
+	\item Of particular note is the Warm Springs Indian Reservation, which is a rural community of color. There hasn't been a single student from that community on the Dean's List in the past decade.
+	
+	\item Within the Willamette Valley, rural areas and smaller towns with comparatively higher proportions of kids of color are less likely to have students on the Dean's Lists. Getting more kids on the Dean's List from smaller towns and rural areas slightly north of Salem, as well as Multnomah county in areas east of I205, would likely go far in closing the racial gap in Dean's List students.
+\end{itemize}
+
+
+\section{Conclusion and recommended actions}
+
+Once again, this is a non-peer-reviewed technical report put out by a disgruntled grad student over winter break as an exploratory exercise. Take the findings with a salt shaker.
+
+That's not to say the findings are totally useless, however, and there are some actions which should happen as a consequence of these preliminary results:
+
+\begin{itemize}
+	\item \textbf{The University Senate}: should undertake a discussion inside the Senate, and with all faculty more broadly, about whether the letter grading scheme is really working for us anymore. Some law schools and small liberal arts colleges have adopted a ``High Pass/Pass/Fail'' system. Perhaps we should adopt such a system as the default grading option for undergraduate classes. Obviously there are pros and cons, and some faculty will be for or against a change to a different student assessment system. Regardless, there should probably be some open minded discussion at a university-wide level about changing the way UO faculty assign grades.
+	\item \textbf{Deans and department heads:} should correlate the apparent grade inflation results with the workplace climate survey, student end-of-term evaluation feedback, enrollment trends in their own unit(s), and the actual grade distributions (not just our inferred findings from the Dean's Lists). Deans and department heads should share their findings with faculty and GE-teachers, and do some group reflection on actions to take going forward.
+	\item \textbf{Senior leadership}: should take a close look at the thirteen communities of concern identified in Table~\ref{tab:areas-of-concern}. In particular, the appropriate administrators should consult with UO's tribal advisors and figure out what is going on with the apparent top-student pipeline failure related to the Warm Springs Indian Reservation. For all of these communities, administrators should do some reflection on if there's something we at UO are doing wrong (such as inadequate recruiting outreach, lack of scholarships, insufficient student support, whatever), design a game plan to fix it if so, and execute that plan.
+	\item \textbf{Everyone}: should consider the gender, racial, and geographical disparities outlined in this report, and their implications. Namely, men are less likely than women to be top performers at UO, academically high achieving students are more likely to come from whiter zip codes, and rural areas are producing fewer top students than urban areas on a per-capita basis. These are obviously complex issues, limited results, and scholars more experienced than me can contextualize and critique better than I can. But I think it's worth some reflection.
+\end{itemize}
+
+\textbf{If any budget-writing administrator has actually read to the end of this document and found the report insightful, paying a living wage to UO's graduate employees would be an appreciated ``Thank You!'' Adjusting graduate employee salaries at UO so they are at par with the new minimum graduate employee salaries in the University of California system would be a great first step.}
+
 
 \end{document}
